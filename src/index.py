@@ -42,7 +42,7 @@ def handle_message(event):
         return
     else :
         role_mention = f'<@&{U09dcd3f5292530ebe2a1203ffa93f06a}>'
-        text1 = f'{role_mention}\n{event.message.text}')
+        text1 = f'{role_mention}\n{event.message.text}'
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text=text1))
