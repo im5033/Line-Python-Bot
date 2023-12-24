@@ -41,9 +41,11 @@ def handle_message(event):
             TextSendMessage(text="好的，我乖乖閉嘴 > <，如果想要我繼續說話，請跟我說 「說話」 > <"))
         return
     else :
+        role_mention = f'<@&{U09dcd3f5292530ebe2a1203ffa93f06a}>'
+        text1 = f'{role_mention}\n{event.message.text}')
         line_bot_api.reply_message(
             event.reply_token,
-            TextSendMessage(text=event.message.text))
+            TextSendMessage(text=text1))
         return
 
 if __name__ == "__main__":
